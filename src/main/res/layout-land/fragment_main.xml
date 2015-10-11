@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     tools:context=".MainActivityFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_holder">
+
+
+    <TextView
+        android:id="@+id/tv_cb_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of Problems"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/cb_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tv_cb_title"
+        android:layout_alignRight="@+id/tv_cb_title"
+        android:layout_alignEnd="@+id/tv_cb_title">
+
+
+
+        <CheckBox
+            android:id="@+id/cb_addition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Addition"/>
+
+        <CheckBox
+            android:id="@+id/cb_subtraction"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtraction"/>
+
+
+        <CheckBox
+            android:id="@+id/cb_multiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiplication"/>
+
+        <CheckBox
+            android:id="@+id/cb_division"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Division"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/cb_layout"
+        android:layout_toRightOf="@+id/cb_layout"
+        android:layout_toEndOf="@+id/cb_layout"
+        android:layout_marginLeft="76dp"
+        android:layout_marginStart="76dp" />
+    <LinearLayout
+        android:id="@+id/sign_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_sign"
+        android:layout_alignLeft="@+id/cb_layout">
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_selector_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Integer to Practice"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/cb_positive"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="46dp"
+        android:layout_marginEnd="46dp" />
+
+
+        <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/btn_start"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp" />
+
+        <CheckBox
+            android:id="@+id/cb_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Negative"
+            android:layout_below="@+id/cb_positive"
+            android:layout_toRightOf="@+id/tv_sign"
+            android:layout_toEndOf="@+id/tv_sign" />
+
+        <CheckBox
+            android:id="@+id/cb_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Positive"
+            android:layout_below="@+id/sign_layout"
+            android:layout_alignLeft="@+id/cb_negative"
+            android:layout_alignStart="@+id/cb_negative" />
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="125dp"
+            android:id="@+id/numberPicker"
+            android:orientation="vertical"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_alignBottom="@+id/cb_layout"
+            android:layout_toRightOf="@+id/btn_start"
+            android:layout_toEndOf="@+id/btn_start" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
